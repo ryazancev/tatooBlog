@@ -1,0 +1,61 @@
+@import "../mixins/media.scss";
+
+/* Global */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  color: #1b1b1b;
+  background-color: #eeeeee;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-position: inside;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @include screen-lg {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 15px;
+  @include screen-sm {
+    padding: 0 20px;
+  }
+  @include screen-lg {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  @include screen-xl {
+    max-width: 970px;
+  }
+  @include media-custom(1337px) {
+    max-width: 1210px;
+  }
+}

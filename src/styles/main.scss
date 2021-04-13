@@ -1,0 +1,55 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "./common/base.scss";
+@import "./common/fonts.scss";
+
+.main-title {
+  text-align: center;
+}
+.main__image {
+  display: block;
+  margin: 0 auto;
+}
+.about__text {
+  text-align: center;
+  @include screen-lg {
+    text-align: left;
+  }
+}
+
+.accordion {
+  width: fit-content;
+  border-bottom: 1px dashed #000000;
+  cursor: pointer;
+  transition: 0.4s;
+  @include screen-lg {
+    &:hover {
+      background: #c4c4c4;
+    }
+  }
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.active {
+  background: #c4c4c4;
+}
+
+.tatoo {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+.footer__link {
+  display: block;
+}
+
+
+
+
