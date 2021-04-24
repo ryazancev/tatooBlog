@@ -2,13 +2,26 @@
 @import "./common/base.scss";
 @import "./common/fonts.scss";
 
+.main {
+  position: relative;
+  &__title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+  }
+}
+
 .main-title {
   text-align: center;
 }
+
 .main__image {
   display: block;
   margin: 0 auto;
 }
+
 .about__text {
   text-align: center;
   @include screen-lg {
@@ -44,6 +57,7 @@
 
 footer {
   text-align: center;
+  padding-top: 60px;
 }
 
 .footer__link {
