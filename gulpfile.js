@@ -33,6 +33,7 @@ const styles = () => {
 
 const scripts = () => {
     return src([
+        'node_modules/jquery/dist/jquery.min.js',
         'src/scripts/modules/*.js'
     ])
         .pipe(babel({presets: ['@babel/env']}))

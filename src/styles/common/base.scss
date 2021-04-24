@@ -45,6 +45,7 @@ img {
 
 .container {
   padding: 0 15px;
+  position: relative;
   @include screen-sm {
     padding: 0 20px;
   }

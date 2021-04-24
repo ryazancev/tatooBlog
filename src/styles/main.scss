@@ -1,15 +1,43 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "./common/base.scss";
 @import "./common/fonts.scss";
+@import "lightcase.css";
+
+header {
+  display: none;
+  @include screen-md {
+    display: block;
+    height: 58px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav__link:not(.footer__link) {
+      border-bottom: 1px solid black;
+    }
+  }
+}
+
+main {
+  padding-top: 10px;
+}
 
 .main {
-  position: relative;
   &__title {
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
+  }
+  @include screen-md {
+    display: flex;
+    .about {
+      flex: 0 0 50%;
+    }
   }
 }
 
@@ -26,6 +54,34 @@
   text-align: center;
   @include screen-lg {
     text-align: left;
+  }
+}
+
+.work__wrapper {
+  display: grid;
+  gap: 10px;
+  @include screen-md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-custom(1600px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.work-img {
+  a {
+    display: block;
+    position: relative;
+    padding-bottom: 320px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 
@@ -57,13 +113,20 @@
 
 footer {
   text-align: center;
-  padding-top: 60px;
 }
 
 .footer__link {
   display: block;
 }
 
-
+section {
+  margin-bottom: 32px;
+  @include screen-md {
+    margin-bottom: 40px;
+  }
+  @include screen-lg {
+    margin-bottom: 62px;
+  }
+}
 
 

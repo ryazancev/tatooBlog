@@ -1,0 +1,1 @@
+$('a[data-rel^=lightcase]').lightcase();
