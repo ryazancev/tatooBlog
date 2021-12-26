@@ -1,0 +1,13 @@
+.faq {
+  &__wrapper {
+    height: 240px;
+    overflow: hidden;
+  }
+  &__wrapper.open {
+    height: auto;
+    overflow: visible;
+  }
+  &__button {
+    font: inherit;
+  }
+}

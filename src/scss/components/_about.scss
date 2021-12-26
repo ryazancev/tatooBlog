@@ -1,0 +1,6 @@
+.about__text {
+  text-align: center;
+  @include screen-lg {
+    text-align: left;
+  }
+}

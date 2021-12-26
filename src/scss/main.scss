@@ -1,0 +1,16 @@
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "vars";
+@import "settings";
+
+// components
+@import "./components/header";
+@import "./components/footer";
+@import "./components/main";
+@import "./components/about";
+@import "./components/faq";
+@import "./components/accordion";
+@import "./components/work";
+@import "./components/swiper";
+@import "./components/tatoo";

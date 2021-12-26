@@ -1,0 +1,25 @@
+.work__wrapper {
+  display: grid;
+  gap: 10px;
+  @include screen-md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-custom(1600px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.swiper-slide {
+  position: relative;
+  padding-top: 347px;
+}
+
+.work__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

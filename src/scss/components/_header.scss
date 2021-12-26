@@ -1,0 +1,24 @@
+header {
+  display: none;
+  @include screen-md {
+    display: block;
+    height: 58px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav__link:not(.footer__link) {
+      border-bottom: 1px solid black;
+      text-decoration: none;
+    }
+  }
+  @include hover {
+    .nav__link:focus,
+    .nav__link:hover {
+      opacity: 0.7;
+    }
+  }
+}

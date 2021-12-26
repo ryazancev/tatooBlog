@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  color: $main-black;
+  background-color: $background;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-position: inside;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @include hover {
+    text-decoration: underline;
+  }
+
+}
+
+img {
+  //max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+section {
+  margin-bottom: 32px;
+  @include screen-md {
+    margin-bottom: 40px;
+  }
+  @include screen-lg {
+    margin-bottom: 62px;
+  }
+}
+
+.container {
+  padding: 0 15px;
+  position: relative;
+  @include screen-sm {
+    padding: 0 20px;
+  }
+  @include screen-lg {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  @include screen-xl {
+    max-width: 970px;
+  }
+  @include media-custom(1337px) {
+    max-width: 1210px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

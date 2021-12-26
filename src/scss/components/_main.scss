@@ -1,0 +1,44 @@
+
+
+.main {
+  padding-top: 10px;
+  &__title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+  }
+  @include screen-md {
+    display: flex;
+    align-items: center;
+    .about {
+      flex: 0 0 50%;
+    }
+  }
+
+  @include screen-lg {
+    max-width: 750px;
+    margin: 0 auto;
+    .container {
+      max-width: none;
+      margin: 0;
+    }
+  }
+  @include screen-xl {
+    max-width: 970px;
+  }
+  @include media-custom(1337px) {
+    max-width: 1210px;
+  }
+}
+
+.main-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+//.main__image {
+//  display: block;
+//  margin: 0 auto;
+//}

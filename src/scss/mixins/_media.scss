@@ -1,0 +1,34 @@
+$screen-sm:                   480px;
+$screen-md:                   768px;
+$screen-lg:                   992px;
+$screen-xl:                   1200px;
+
+@mixin media-custom ($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (min-width:$screen-xl) {
+    @content;
+  }
+}
